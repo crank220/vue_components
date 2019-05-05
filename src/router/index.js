@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import aaa from '@/components/HelloWorld'
-import bbb from '@/components/emm'
+import Home from '@/components/home'
+import InfiniteScroll from '@/components/infiniteScroll'
 
 Vue.use(Router)
 
@@ -11,17 +11,17 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: aaa,
+      component: Home,
       meta: {
-        title: 'aaa'
+        title: 'home'
       }
     },
     {
-      path: '/en',
-      name: 'en',
-      component: bbb,
+      path: '/infiniteScroll',
+      name: 'infiniteScroll',
+      component: InfiniteScroll,
       meta: {
-        title: 'bbb'
+        title: 'infiniteScroll'
       }
     }
   ]
