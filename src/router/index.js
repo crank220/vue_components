@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/home'
 import InfiniteScroll from '@/components/infiniteScroll'
 import WaterMarker from '@/components/waterMarker'
+import Rate from '@/components/rate'
+
 
 Vue.use(Router)
 
@@ -31,6 +33,14 @@ const router = new Router({
       component: WaterMarker,
       meta: {
         title: 'waterMarker'
+      }
+    },
+    {
+      path: '/rate',
+      name: 'rate',
+      component: Rate,
+      meta: {
+        title: 'rate'
       }
     }
   ]
