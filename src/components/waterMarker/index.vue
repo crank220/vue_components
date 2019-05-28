@@ -1,5 +1,7 @@
 <template>
   <div class="water-marker-demo" v-water-marker>
+    <router-link to="/">home</router-link>
+    <h1>水印</h1>
     <button @click="change">change</button>
   </div>
 </template>
