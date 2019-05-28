@@ -1,13 +1,13 @@
 <template>
-  <div class="v5-rate-mod">
+  <div class="rate-mod">
     <span v-for="i in num" :key="i" @click="edit(i)" >
-      <i style="font-family: 'tq-v5' !important;" :class="[ voidIcon !== '' && i > value ? voidIcon : icon]" :style="{color: i > value ? voidColor : color, 'font-size': size}">&#xe616;</i>
+      <i style="font-family: 'crank' !important;" :class="[ voidIcon !== '' && i > value ? voidIcon : icon]" :style="{color: i > value ? voidColor : color, 'font-size': size}">&#xe616;</i>
     </span>
   </div>
 </template>
 <script>
 export default {
-  name: 'v5-rate',
+  name: 'Rate',
   props: {
     value: {
       type: Number,
@@ -52,7 +52,7 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'tq-v5';  /* project id 886927 */
+  font-family: 'crank';  /* project id 886927 */
   src: url('//at.alicdn.com/t/font_886927_kxey1nxy84.eot');
   src: url('//at.alicdn.com/t/font_886927_kxey1nxy84.eot?#iefix') format('embedded-opentype'),
   url('//at.alicdn.com/t/font_886927_kxey1nxy84.woff2') format('woff2'),
