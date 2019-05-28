@@ -1,7 +1,7 @@
 <template>
   <div class="v5-rate-mod">
     <span v-for="i in num" :key="i" @click="edit(i)" >
-      <i :class="[ voidIcon !== '' && i > value ? voidIcon : icon]" :style="{color: i > value ? voidColor : color, 'font-size': size}">&#xe630;</i>
+      <i style="font-family: 'tq-v5' !important;" :class="[ voidIcon !== '' && i > value ? voidIcon : icon]" :style="{color: i > value ? voidColor : color, 'font-size': size}">&#xe616;</i>
     </span>
   </div>
 </template>
