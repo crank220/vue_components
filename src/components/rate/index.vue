@@ -1,5 +1,6 @@
 <template>
   <div class="rate-demo">
+    <router-link to="/">home</router-link>
     <h2>评分</h2>
     
     <h3>基础</h3>
@@ -42,7 +43,7 @@
 <script>
 import Rate from './to'
 export default {
-  name: 'v5-demo',
+  name: 'RateDemo',
   data () {
     return {
       rate0: 0,

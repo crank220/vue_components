@@ -4,6 +4,7 @@ import Home from '@/components/home'
 import InfiniteScroll from '@/components/infiniteScroll'
 import WaterMarker from '@/components/waterMarker'
 import Rate from '@/components/rate'
+import Timer from '@/components/timer'
 
 
 Vue.use(Router)
@@ -41,6 +42,14 @@ const router = new Router({
       component: Rate,
       meta: {
         title: 'rate'
+      }
+    },
+    {
+      path: '/timer',
+      name: 'timer',
+      component: Timer,
+      meta: {
+        title: 'timer'
       }
     }
   ]
