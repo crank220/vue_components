@@ -9,5 +9,7 @@
     <router-link to="/rate">rate</router-link>
     <h2>计时器/定时器</h2>
     <router-link to="/timer">timer</router-link>
+    <h2>折叠面板</h2>
+    <router-link to="/collapse">collapse</router-link>
   </div>
 </template>

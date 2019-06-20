@@ -5,6 +5,7 @@ import InfiniteScroll from '@/components/infiniteScroll'
 import WaterMarker from '@/components/waterMarker'
 import Rate from '@/components/rate'
 import Timer from '@/components/timer'
+import Collapse from '@/components/collapse'
 
 
 Vue.use(Router)
@@ -50,6 +51,14 @@ const router = new Router({
       component: Timer,
       meta: {
         title: 'timer'
+      }
+    },
+    {
+      path: '/collapse',
+      name: 'collapse',
+      component: Collapse,
+      meta: {
+        title: 'collapse'
       }
     }
   ]
