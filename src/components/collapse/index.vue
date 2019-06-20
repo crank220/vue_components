@@ -1,6 +1,8 @@
 <template>
   <div class="collapse-demo">
-    <collapse />
+    <collapse>
+      ememem<br/>ememem<br/>ememem<br/>ememem<br/>ememem<br/>
+    </collapse>
   </div>
 </template>
 
