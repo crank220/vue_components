@@ -1,14 +1,13 @@
 <template>
   <div class="collapse-mod">
-    <p @click="show = !show">title</p>
-    <div class='box' :style="{'height': height}" v-show="loading || show">
-      <div ref='box'><slot/></div>
+    <div @click="change" class="title">title</div>
+    <div class='content' :style="{'height': height}" v-show="loading || show">
+      <div ref='box' class="box"><slot/></div>
     </div>
   </div>
 </template>
 
 <script>
-import { setTimeout } from 'timers';
 export default {
   name: 'collapse',
   data() {
@@ -20,7 +19,6 @@ export default {
   },
   watch: {
     show(n) {
-      if (this.loading) return
       if (this.height !== null) return
       this.loading = true
       this.height = n ? 0 : this.$refs['box'].clientHeight + 'px'
@@ -29,18 +27,34 @@ export default {
         setTimeout(() => {
           this.height = null
           this.loading = false
-        }, 300)
+        }, 200)
       })
+    }
+  },
+  methods: {
+    change() {
+      if (this.loading) return
+      this.show = !this.show
     }
   }
 }
 </script>
 
 <style scoped>
-.collapse-mod .box{
-  transition: height .3s;
+.collapse-mod .title{
+  background: aqua;
+  margin: 0;
+  padding: 10px 15px;
+}
+.collapse-mod .content{
+  background: rebeccapurple;
+  transition: all .2s ease-in-out;
+  will-change: height;
   overflow: hidden;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+.collapse-mod .content .box{
+  padding: 15px;  
 }
 </style>
