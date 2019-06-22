@@ -1,5 +1,6 @@
 <template>
   <div class="timer-demo">
+    <router-link to="/">home</router-link>
     <h2>计时器/定时器</h2>
     
     <h3>基础-记时器</h3>
@@ -57,6 +58,7 @@ export default {
   },
   methods: {
     getCurTime (time) {
+      // eslint-disable-next-line no-console
       console.log(time)
     }
   }
