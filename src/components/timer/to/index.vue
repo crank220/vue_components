@@ -1,11 +1,11 @@
 <template>
-  <div class="v5-timer">
+  <div class="timer">
     {{result}}
   </div>
 </template>
 <script>
 export default {
-  name: 'v5-timer',
+  name: 'timer',
   props: {
     startTime: {
       type: Number | Object,

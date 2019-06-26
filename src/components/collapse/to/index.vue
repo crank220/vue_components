@@ -19,10 +19,15 @@ export default {
     }
   },
   methods: {
+    // (!transition) --- !height:auto PS: (height: auto) = (!transition)
+    // 等待同步任务
+    //    clear height:auto
+    //    ((展开 | 展开ing) & 收起未完成) --- 开始收起
+    //    ((收起 | 收起ing) | 收起已完成) --- [(收起已完成) --- 关闭上次未执行完的transition] & 开始展开
+    //    height: auto
     change() {
       if (this.height === null) {
-        const { clientHeight } = this.$refs['box']
-        this.height = this.show ? clientHeight + 'px' : 0
+        this.height = this.show ? this.$refs['box'].clientHeight + 'px' : 0
       }
       setTimeout(() => {
         clearInterval(this.ST2)
@@ -36,8 +41,7 @@ export default {
           if (this.height === 0) clearInterval(this.ST1)
           this.show = true
           setTimeout(() => {
-            const { clientHeight } = this.$refs['box']
-            this.height = clientHeight + 'px'
+            this.height = this.$refs['box'].clientHeight + 'px'
           })
         }
         this.ST2 = setInterval(() => {
@@ -61,7 +65,7 @@ export default {
   font-size: 12px;
 }
 .collapse-mod .content{
-  transition: all .2s ease-in-out;
+  transition: height .2s ease-in-out;
   will-change: height;
   overflow: hidden;
   padding-top: 0px;
