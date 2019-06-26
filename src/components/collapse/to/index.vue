@@ -13,46 +13,38 @@ export default {
   data() {
     return {
       show: false,
-      height: 0,
-      ST: null,
+      height: null,
+      ST1: null,
+      ST2: null,
     }
   },
   methods: {
     change() {
-      // if (this.show) {
-      //   if (this.height === 0) {
-      //     clearInterval(this.ST)
-      //     this.show = true
-      //     setTimeout(() => {
-      //       const { clientHeight } = this.$refs['box']
-      //       this.height = clientHeight + 'px'
-      //     })
-      //   } else {
-      //     this.height = 0
-      //     this.ST = setTimeout(() => {
-      //       this.show = false
-      //     }, 300)
-      //   }
-      // } else {
-      //   this.show = true
-      //   setTimeout(() => {
-      //     const { clientHeight } = this.$refs['box']
-      //     this.height = clientHeight + 'px'
-      //   })
-      // }
-      if (this.show && this.height !== 0) {
-        this.height = 0
-        this.ST = setTimeout(() => {
-          this.show = false
-        }, 300)
-      } else {
-        if (this.height === 0) clearInterval(this.ST)
-        this.show = true
-        setTimeout(() => {
-          const { clientHeight } = this.$refs['box']
-          this.height = clientHeight + 'px'
-        })
+      if (this.height === null) {
+        const { clientHeight } = this.$refs['box']
+        this.height = this.show ? clientHeight + 'px' : 0
       }
+      setTimeout(() => {
+        clearInterval(this.ST2)
+        if (this.show && this.height !== 0) {
+          this.height = 0
+          this.ST1 = setInterval(() => {
+            this.show = false
+            clearInterval(this.ST1)
+          }, 300)
+        } else {
+          if (this.height === 0) clearInterval(this.ST1)
+          this.show = true
+          setTimeout(() => {
+            const { clientHeight } = this.$refs['box']
+            this.height = clientHeight + 'px'
+          })
+        }
+        this.ST2 = setInterval(() => {
+          this.height = null
+          clearInterval(this.ST2)
+        }, 300)
+      })
     }
   }
 }
