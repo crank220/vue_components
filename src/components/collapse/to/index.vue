@@ -1,6 +1,6 @@
 <template>
   <div class="collapse-mod">
-    <div @click="change" class="title">title</div>
+    <div @click="change" class="title">{{title}}</div>
     <div class='content' :style="{'height': height}" v-show="show">
       <div ref='box' class="box"><slot/></div>
     </div>
@@ -10,6 +10,12 @@
 <script>
 export default {
   name: 'collapse',
+  props: {
+    title: {
+      type: String,
+      default: 'title',
+    },
+  },
   data() {
     return {
       show: false,
