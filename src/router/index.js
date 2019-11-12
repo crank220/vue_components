@@ -6,7 +6,7 @@ import WaterMarker from '@/components/waterMarker'
 import Rate from '@/components/rate'
 import Timer from '@/components/timer'
 import Collapse from '@/components/collapse'
-
+import MusicOscillogram from '@/components/musicOscillogram'
 
 Vue.use(Router)
 
@@ -59,6 +59,14 @@ const router = new Router({
       component: Collapse,
       meta: {
         title: 'collapse'
+      }
+    },
+    {
+      path: '/musicOscillogram',
+      name: 'musicOscillogram',
+      component: MusicOscillogram,
+      meta: {
+        title: 'musicOscillogram'
       }
     }
   ]

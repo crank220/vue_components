@@ -11,5 +11,7 @@
     <router-link to="/timer">timer</router-link>
     <h2>折叠面板</h2>
     <router-link to="/collapse">collapse</router-link>
+    <h2>音乐波形图</h2>
+    <router-link to="/musicOscillogram">musicOscillogram</router-link>
   </div>
 </template>

@@ -1,5 +1,8 @@
 # vue_components
 
+``
+  原创、无任何依赖
+``
 ## Project setup
 ```
 npm install
