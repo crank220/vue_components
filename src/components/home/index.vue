@@ -15,3 +15,15 @@
     <router-link to="/musicOscillogram">musicOscillogram</router-link>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  @import './index.scss'; 
+}
+// https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries 媒体查询！！！
+@media (min-width: 700px) { 
+  a {
+    color: blue;
+  }
+}
+</style>
