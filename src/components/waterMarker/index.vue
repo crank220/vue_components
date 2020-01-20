@@ -21,7 +21,6 @@ export default {
 
 <style>
 .water-marker-demo{
-  width: 1024px;
   height: 512px;
   background: green;
 }
