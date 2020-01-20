@@ -18,10 +18,11 @@
 
 <style lang="scss" scoped>
 @media screen and (min-width: 500px) and (max-width: 800px) {
-  @import './index.scss'; 
+  @import './index.scss';
 }
 // https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries 媒体查询！！！
-@media (min-width: 700px) { 
+// https://blog.csdn.net/jiang_fulai/article/details/80134663 scss
+@media (min-width: 700px) {
   a {
     color: blue;
   }
